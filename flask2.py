@@ -2,7 +2,6 @@
 from flask import Flask
 app = Flask(__name__)
 @app.route('/vector/<word>')
-@cross_origin()
 
 def make_vector(keyword):
 
@@ -10,4 +9,4 @@ def make_vector(keyword):
     return str(query)
 
 if __name__ == '__main__':
-    app.run(debug = False, host='0.0.0.0', port=port, threaded = True)
+    app.run(debug = False)
